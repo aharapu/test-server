@@ -1,3 +1,6 @@
+# Google Cloud Platform
+app.yaml
+
 # Logs
 logs
 *.log

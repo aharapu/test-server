@@ -1,0 +1,15 @@
+runtime: nodejs18
+
+service: service-name
+
+env_variables:
+  PGHOST: "1.1.1.1" # DB_VM_INSTANCE_IP
+  PGDATABASE: "db name"
+  PGUSER: "user name"
+  PGPASSWORD: "password"
+  PGPORT: "portnumber"
+
+vpc_access_connector:
+  name: projects/PROJECT_ID/locations/REGION/connectors/CONNECTOR_NAME
+
+# TODO -> add scaling
