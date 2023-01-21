@@ -3,11 +3,11 @@ runtime: nodejs18
 service: service-name
 
 env_variables:
-  PGHOST: "1.1.1.1" # DB_VM_INSTANCE_IP
-  PGDATABASE: "db name"
-  PGUSER: "user name"
-  PGPASSWORD: "password"
-  PGPORT: "portnumber"
+  PG_VM_HOST: "1.1.1.1" # DB_VM_INSTANCE_IP
+  PG_VM_DATABASE: "db name"
+  PG_VM_USER: "user name"
+  PG_VM_PASSWORD: "password"
+  PG_VM_PORT: "portnumber"
 
 vpc_access_connector:
   name: projects/PROJECT_ID/locations/REGION/connectors/CONNECTOR_NAME
