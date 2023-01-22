@@ -4,17 +4,17 @@ require("dotenv").config();
 
 // TODO -> test adding cors
 const app = express();
-const port = 3000;
-
-const pgClient = new Client({
-  user: process.env.PG_VM_USER,
-  host: process.env.PG_VM_HOST,
-  database: process.env.PG_VM_DATABASE,
-  password: process.env.PG_VM_PASSWORD,
-  port: process.env.PG_VM_PORT,
-});
+const port = 8080;
 
 app.get("/users", async (req, res) => {
+  const pgClient = new Client({
+    user: process.env.PG_VM_USER,
+    host: process.env.PG_VM_HOST,
+    database: process.env.PG_VM_DATABASE,
+    password: process.env.PG_VM_PASSWORD,
+    port: process.env.PG_VM_PORT,
+  });
+
   await pgClient.connect();
 
   const result = await pgClient.query("SELECT * FROM users");
